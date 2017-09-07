@@ -12,9 +12,10 @@ $seed = 'https://www.bu.edu/link/bin/uiscgi_studentlink.pl/1346752597?ModuleName
    $data = file_get_html($url);
     //$data = new simple_html_dom();  
    // $data->load_file($url);
-    $nodes = $data->find("input[type=hidden]");
-
-    foreach ($nodes as $node) {
+   echo $nodes = $data->find("input[type=hidden]");
+echo '----------------------------------------------';
+   
+   foreach ($nodes as $node) {
     $val = $node->value;
     echo $val . "<br />";
     }
